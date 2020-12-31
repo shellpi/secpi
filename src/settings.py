@@ -1,7 +1,7 @@
 import json
 
 # FUNCTION TO LOAD A PROPERTY FROM A JSON FILE #
-def load_from_json(path: str, variable: str) -> list:
+def load_from_json(path: str, variable: str) -> any:
 	with open(path) as content:
 		loaded_json = json.load(content)
 		return loaded_json[variable]
@@ -15,3 +15,5 @@ EMAILSUBJECT   = load_from_json('settings.json', 'email_subject')
 EMAILTEXT      = load_from_json('settings.json', 'email_text')
 EMAILSERVERHOST= load_from_json('settings.json', 'SMTP_host')
 EMAILSERVERPORT= load_from_json('settings.json', 'SMTP_port')
+IMAGEFORMAT    = load_from_json('settings.json', 'image_format')
+USEVIDEOPORT   = load_from_json('settings.json', 'use_video_port')

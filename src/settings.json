@@ -5,5 +5,7 @@
 	"email_subject": "SecPi example",
 	"email_text": "test",
 	"SMTP_host": "smtp.example.com",
-	"SMTP_port": "587"
+	"SMTP_port": "587",
+	"image_format": "png",
+	"use_video_port": false
 }
