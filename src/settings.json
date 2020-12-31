@@ -1,3 +1,9 @@
 {
-	"mail": null
+	"email_sender_usr": "example@example.com",
+	"email_sender_psw": "example",
+	"email_receiver": "example@example.com",
+	"email_subject": "SecPi example",
+	"email_text": "test",
+	"SMTP_host": "smtp.example.com",
+	"SMTP_port": "587"
 }

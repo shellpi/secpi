@@ -8,4 +8,10 @@ def load_from_json(path: str, variable: str) -> list:
 
 
 # VARIABLES #
-MAIL = load_from_json('settings.json', 'mail')
+EMAILSENDERUSR = load_from_json('settings.json', 'email_sender_usr')
+EMAILSENDERPSW = load_from_json('settings.json', 'email_sender_psw')
+EMAILRECEIVER  = load_from_json('settings.json', 'email_receiver')
+EMAILSUBJECT   = load_from_json('settings.json', 'email_subject')
+EMAILTEXT      = load_from_json('settings.json', 'email_text')
+EMAILSERVERHOST= load_from_json('settings.json', 'SMTP_host')
+EMAILSERVERPORT= load_from_json('settings.json', 'SMTP_port')

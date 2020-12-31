@@ -10,7 +10,7 @@ import smtplib
 def send_secpi_email(image, img_name: str) -> None:
 	msg = MIMEMultipart()
 	msg['Subject'] = settings.EMAILSUBJECT
-	msg['From'] = settings.EMAILSENDER
+	msg['From'] = settings.EMAILSENDERUSR
 	msg['To'] = settings.EMAILRECEIVER
 
 	text = MIMEText(settings.EMAILTEXT)
