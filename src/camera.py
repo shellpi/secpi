@@ -11,4 +11,4 @@ def get_actual_camera_frame() -> file:
 			               settings.IMAGEFORMAT,
 				       use_video_port=settings.USEVIDEOPORT)
 		except Exception as e:
-			tools.error(e)
+			tools.error(e, 'CameraError')
