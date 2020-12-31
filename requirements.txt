@@ -1,0 +1,4 @@
+picamera
+opencv-python
+imutils
+numpy
