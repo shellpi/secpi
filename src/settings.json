@@ -10,5 +10,10 @@
 	"use_video_port": false,
 	"alarm_sound": "example",
 	"alarm_button_pin": 1,
-	"alarm_led_pin": 1
+	"alarm_led_pin": 1,
+
+	"streamer_token": "abc",
+	"streamer_host": "0.0.0.0",
+	"streamer_port": 8080,
+	"streamer_debug": false
 }
