@@ -4,7 +4,7 @@ import picamera
 
 # FUNCTION TO GET THE ACTUAL CAMERA FRAME #
 def get_actual_camera_frame() -> any:
-	camera_output = open('.secpi.camera.tmp', 'wb+')
+	camera_output = open('/tmp/.secpi.camera.tmp', 'wb+')
 	with picamera.PiCamera() as camera:
 		try:
 			camera.capture(camera_output, 
