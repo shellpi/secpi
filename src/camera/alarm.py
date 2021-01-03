@@ -17,9 +17,9 @@ def play_alarm_sound(button: Button) -> None:
 def alarm_led_ON(led: LED, button: Button) -> None:
 	while !button.is_pressed:
 		led.on()
-		sleep(1000)
+		sleep(1)
 		led.off
-		sleep(1000)
+		sleep(1)
 
 
 # PLAY THE ALARM WHILE BUTTON IS NOT PRESSED #

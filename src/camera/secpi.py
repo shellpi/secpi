@@ -17,7 +17,7 @@ def main() -> None:
 			try:
 				snt( send_secpi_email, (frame, 'Camera view') )
 				snt( alarm )
-				sleep(10000) #Wait 10 seconds
+				sleep(10) #Wait 10 seconds
 			except Exception as e:
 				error(e, 'MultithreadingError')
 
