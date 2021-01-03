@@ -8,5 +8,7 @@
 	"SMTP_port": "587",
 	"image_format": "png",
 	"use_video_port": false,
-	"alarm_sound": "example"
+	"alarm_sound": "example",
+	"alarm_button_pin": 1,
+	"alarm_led_pin": 1
 }
