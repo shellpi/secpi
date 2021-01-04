@@ -23,9 +23,9 @@ app = Flask(__name__)
 @app.route('/<token>')
 def index(token) -> any:
 	if token == TOKEN:
-		return render_template('index.html')
+		return render_template('template/index/index.html')
 	else:
-		return render_template('invalid_token.html')
+		return render_template('template/invalid_token/index.html')
 
 
 # FRAME GENERATOR #
