@@ -4,7 +4,7 @@
 from flask import Flask, render_template, Response, request
 from camera import Camera
 
-import settings
+from settings import *
 
 import time
 import threading
@@ -12,7 +12,7 @@ import os
 
 
 # CAMERA #
-pi_camera = Camera(flip=settings.FLIP)
+pi_camera = Camera(flip=FLIP)
 
 
 # APP #
@@ -22,7 +22,7 @@ app = Flask(__name__)
 # INDEX #
 @app.route('/<token>')
 def index(token) -> any:
-	if token == settings.TOKEN:
+	if token == TOKEN:
 		return render_template('index.html')
 	else:
 		return render_template('invalid_token.html')
@@ -44,4 +44,4 @@ def feed(token) -> Response:
 
 
 if __name__ == '__main__':
-	app.run(host=settings.HOST, port=settings.PORT, debug=settings.DEBUG)
+	app.run(host=HOST, port=PORT, debug=DEBUG)
