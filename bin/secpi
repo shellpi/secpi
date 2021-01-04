@@ -14,21 +14,33 @@ function usage {
 	echo "       where action is:"
 	echo "        start, config"
 }
+# prints SecPi usage
 
-function start {
-	python src/secpi.py
+function start_usage {
+	echo "SecPi start, start a SecPi service"
+	echo "Usage: secpi start [service]"
+	echo "       where service could be:"
+	echo "          camera, streamer"
 }
+# prints SecPi start action usage
 
-function config {
-	bash -c "$1 src/settings.json"
-}
+function run_camera { python src/camera/secpi.py; }
+function run_streamer { python src/stream/secpi.py; }
+function config { bash -c "$1 src/settings.json"; }
+
 
 if [ "$arg1" = "" ]; then
 	usage
 # prints usage if no arguments
 elif [ "$arg1" = "start" ]; then
-	start
-# starts secpi if start argument passed
+	if [ "$arg2" = "camera" ]; then
+		run_camera
+	elif [ "$arg2" = "streamer" ]; then
+		run_streamer
+	else
+		start_usage
+	fi
+# starts a secpi service if start argument passed
 elif [ "$arg1" = "config" ]; then
 	config $EDITOR
 fi
