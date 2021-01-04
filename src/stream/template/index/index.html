@@ -1,0 +1,34 @@
+<!-- Template based on https://github.com/EbenKouao/pi-camera-stream-flask/blob/master/templates/index.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style> {{ index_styles }} </style>
+	</head>
+
+	<title>Camera stream | SecPi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<body>
+	<div class="main" id="newpost">
+		<img  class="camera-bg" style="width: 100%; height:80%; background-attachment: fixed;" id="bg" class="center" src="{{ url_for('video_feed') }}"> 
+	</div>
+	<div class="top-right-logo">
+		<a></a> Camera stream | SecPi </a>
+	</div>
+
+		<div class="navbar">
+			<div class="ignoreCall">
+				<a id=decline class="but_def">
+				<button id="button"> 
+					<i style="background: red; color: white;" class="fa fa-times fa-2x" aria-hidden="true"></i>
+				</button>
+				</a>       
+			</div>
+		</div>
+    
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script> {{ index_script }} </script>
+	</body>
+</html>
