@@ -22,11 +22,16 @@ app = Flask(__name__)
 # INDEX #
 @app.route('/<token>')
 def index(token) -> any:
+	return render_template('template/index/index.html')
+
+
+# VIEWER #
+@app.route('/view/<token>')
+def view(token) -> any:
 	if token == TOKEN:
-		return render_template('template/index/index.html')
+		return render_template('template/viewer/index.html')
 	else:
 		return render_template('template/invalid_token/index.html')
-
 
 # FRAME GENERATOR #
 def gen(camera: Camera) -> any:
