@@ -8,5 +8,7 @@ RUN pip install -r requirements.txt
 COPY bin/secpi .
 COPY src .
 
+EXPOSE 8080
+
 
 CMD [ "./secpi", "start", "streamer" ]
