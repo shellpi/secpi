@@ -26,7 +26,15 @@ function start_usage {
 
 function run_camera { python src/camera/secpi.py; }
 function run_streamer { python src/stream/secpi.py; }
-function config { bash -c "$1 src/settings.json"; }
+
+function config {
+	if [ "$1" = "" ]; then
+		bash -c "src/settings.json"
+	else
+		bash -c "$1 src/settings.json";
+	fi
+}
+# configures SecPi
 
 
 if [ "$arg1" = "" ]; then
