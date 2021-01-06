@@ -20,8 +20,8 @@ app = Flask(__name__)
 
 
 # INDEX #
-@app.route('/<token>')
-def index(token) -> any:
+@app.route('/')
+def index() -> any:
 	return render_template('template/index/index.html')
 
 
