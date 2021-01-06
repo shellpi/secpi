@@ -1,4 +1,7 @@
 {
+	"name": "secpi_cam",
+	"owner": "example@example.com",
+
 	"email_sender_usr": "example@example.com",
 	"email_sender_psw": "example",
 	"email_receiver": "example@example.com",
