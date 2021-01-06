@@ -13,7 +13,7 @@ index_script = open('template/index/script.js').read()
 
 # CONFIGURATION VARIABLES #
 FLIP  = load_from_json('../settings.json', 'flip')
-TOKEN = load_from_json('../settings.json', 'streamer_token')
 HOST  = load_from_json('../settings.json', 'streamer_host')
 PORT  = load_from_json('../settings.json', 'streamer_port')
 DEBUG = load_from_json('../settings.json', 'streamer_debug')
+USERS = load_from_json('../settings.json', 'users')

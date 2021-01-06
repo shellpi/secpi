@@ -13,8 +13,10 @@
 	"alarm_led_pin": 1,
 
 	"flip": false,
-	"streamer_token": "abc",
 	"streamer_host": "0.0.0.0",
 	"streamer_port": 8080,
-	"streamer_debug": false
+	"streamer_debug": false,
+	"users": {
+		"admin": "abc"
+	}
 }

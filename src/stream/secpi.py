@@ -26,12 +26,13 @@ def index(token) -> any:
 
 
 # VIEWER #
-@app.route('/view/<token>')
-def view(token) -> any:
-	if token == TOKEN:
+@app.route('/view/<user>/<password>')
+def view(user, password) -> any:
+	if (USERS[user] == password) and (user != "" and password != ""):
 		return render_template('template/viewer/index.html')
 	else:
 		return render_template('template/invalid_token/index.html')
+
 
 # FRAME GENERATOR #
 def gen(camera: Camera) -> any:
@@ -42,10 +43,13 @@ def gen(camera: Camera) -> any:
 		       b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 
-@app.route('/feed/<token>')
-def feed(token) -> Response:
-	return Response(gen(pi_camera),
-	                mimetype='multipart/x-mixed-replace; boundary=frame')
+@app.route('/feed/<user>/<password>')
+def feed(user, password): -> Response:
+	if (USERS[user] == password) and (user != "" and password != ""):
+		return Response(gen(pi_camera),
+		                mimetype='multipart/x-mixed-replace; boundary=frame')
+	else:
+		return render_template('template/invalid_token/index.html')
 
 
 if __name__ == '__main__':
