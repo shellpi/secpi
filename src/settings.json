@@ -21,5 +21,8 @@
 	"streamer_debug": false,
 	"users": {
 		"admin": "abc"
-	}
+	},
+
+	"plugins-server": "https://shellpi.github.io/secpi_plugins",
+	"secpi-dir": "/usr/secpi"
 }
